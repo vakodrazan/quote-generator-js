@@ -67,3 +67,24 @@ You can use whatever resource you need for this project. You can use the interne
 -   Clean code (indentation, comments, clear variables and functions names)
 
 ## Good luck, and happy coding ✨
+
+ ----------------
+
+# Feedback from me
+
+    These are some feedback from me
+
+## About the time
+
+-   I think we should just get to use to it so we won't be suffer anymore.
+
+ ## Need to improve
+
+-   If the time wasn't limited, I would finish all of my work.
+-   It was hard to me to solve the problem of all the question.
+-   Till now, the second step is still unclear to me.
+-   Most of my work doesn't seems to work so I need to improve on that.
+
+## what I did
+
+-   I created a variable for each quoatation then call all of them using if condition.
