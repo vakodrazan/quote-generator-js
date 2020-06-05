@@ -7,7 +7,7 @@ let firstQuotes = [  // Create the first quote
 let secondQuotes = [  // This is the second quote
     "You only live once, but if you do it right, once is enough",
     "Be who you are and say what you feel, because those who mind don't matter",
-    " Get busy living or get busy dying"
+    "Get busy living or get busy dying"
 ];
 
 let thirdQuotes = [  // Third quote
@@ -25,3 +25,10 @@ let randomThirdQuotes = Math.floor(Math.random() * (thirdQuotes.length));
 let quotes = `${firstQuotes[randomFirstQuotes]} ${secondQuotes[randomSecondQuotes]} ${thirdQuotes[randomThirdQuotes]}.`;
 console.log(quotes);
 
+
+for (let i = 1; i < 5; i++) {
+    if (random === 1) {
+        console.log(array.push(quotes[i]));
+    }
+    console.log(quotes)
+}
