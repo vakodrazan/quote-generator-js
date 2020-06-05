@@ -16,13 +16,12 @@ let thirdQuotes = [  // Third quote
     "Try to work as much as you can"
 ];
 
-let userQuotes = prompt("Choose what quotes number do you want : ")
+let random = prompt("Enter your quote number: ")
 
 let randomFirstQuotes = Math.floor(Math.random() * (firstQuotes.length));
 let randomSecondQuotes = Math.floor(Math.random() * (secondQuotes.length));
 let randomThirdQuotes = Math.floor(Math.random() * (thirdQuotes.length));
 
-let quotes = `${randomFirstQuotes} ${randomSecondQuotes} ${randomThirdQuotes}.`;
-
-console.log(quotes)
+let quotes = `${firstQuotes[randomFirstQuotes]} ${secondQuotes[randomSecondQuotes]} ${thirdQuotes[randomThirdQuotes]}.`;
+console.log(quotes);
 
