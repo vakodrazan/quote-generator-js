@@ -24,41 +24,30 @@ let quotes = `${firstQuotes[randomFirstQuotes]} ${secondQuotes[randomSecondQuote
 console.log(quotes);
 
 
-//1. use prompt to ask the user how many times we want to generate a random quote
+// use prompt to ask the user how many times we want to generate a random quote
 
 let random = prompt("How many quotes do you want to loop between 1 to 5: ");
 
-//2. check if the prompt give us something between 1 and 5
 
-if (random >= 1 && random <= 5) {
-    console.log(quotes)
+
+// refactor our code into a function,
+
+const generatorQuotes = () => { // generate random numbers
+    let arrayFirstQuotes = Math.floor(Math.random() * (firstQuotes.length));
+    let arraySecondQuotes = Math.floor(Math.random() * (secondQuotes.length));
+    let arrayThirdQuotes = Math.floor(Math.random() * (thirdQuotes.length));
+
+    let array1 = firstQuotes[arrayFirstQuotes];
+    let array2 = secondQuotes[arraySecondQuotes];
+    let array3 = thirdQuotes[arrayThirdQuotes];
+
+    let quotesGenerator = `${array1} ${array2} ${array3}.`; // show the generated quotes
+    console.log(`Quotes: ${quotesGenerator}`);
 }
 
-const generatorQuotes = () => {
-    if (random >= 1 && random <= 5) {
-        console.log(quotes)
-    } else {
-    console.log(quotes !== quotes)
+
+if (random >= 1 && random <= 5) { // check if the prompt give us something between 1 and 5
+    for (let i = 1; i <= random; i++) { // use a loop it's last the number of times that the user entered in the prompt!
+        generatorQuotes(); //Call the function inside the loop
     }
 }
-
-for (let i = 1; i <= random; i++) {
-    let randomFirstQuotes = Math.floor(Math.random() * (firstQuotes.length));
-    let randomSecondQuotes = Math.floor(Math.random() * (secondQuotes.length));
-    let randomThirdQuotes = Math.floor(Math.random() * (thirdQuotes.length));
-
-    let array1 = firstQuotes[randomFirstQuotes];
-    let array2 = secondQuotes[randomSecondQuotes];
-    let array3 = thirdQuotes[randomThirdQuotes];
-
-    let quotes = `${array1} ${array2} ${array3}.`;
-    console.log(quotes);
-
-    console.log(generatorQuotes());
-}
-
-//3. we're going to use a loop somewhere, and it's going to last the number of times that the user entered in the prompt!
-//4. refactor our code into a function, and put the function call inside the loop 
-//4.1 generate random numbers
-//4.2 show the generated quotes
-
