@@ -26,7 +26,7 @@ console.log(quotes);
 
 // use prompt to ask the user how many times we want to generate a random quote
 
-let random = prompt("How many quotes do you want to loop between 1 to 5: ");
+let random = prompt("Enter number of quotes you want to loop between 1 to 5: ");
 
 
 
@@ -37,11 +37,11 @@ const generatorQuotes = () => { // generate random numbers
     let arraySecondQuotes = Math.floor(Math.random() * (secondQuotes.length));
     let arrayThirdQuotes = Math.floor(Math.random() * (thirdQuotes.length));
 
-    let array1 = firstQuotes[arrayFirstQuotes];
-    let array2 = secondQuotes[arraySecondQuotes];
-    let array3 = thirdQuotes[arrayThirdQuotes];
+    let arrayIndex1 = firstQuotes[arrayFirstQuotes];
+    let arrayIndex2 = secondQuotes[arraySecondQuotes];
+    let arrayIndex3 = thirdQuotes[arrayThirdQuotes];
 
-    let quotesGenerator = `${array1} ${array2} ${array3}.`; // show the generated quotes
+    let quotesGenerator = `${arrayIndex1} ${arrayIndex2} ${arrayIndex3}.`; // show the generated quotes
     console.log(`Quotes: ${quotesGenerator}`);
 }
 
@@ -50,4 +50,7 @@ if (random >= 1 && random <= 5) { // check if the prompt give us something betwe
     for (let i = 1; i <= random; i++) { // use a loop it's last the number of times that the user entered in the prompt!
         generatorQuotes(); //Call the function inside the loop
     }
+
+} else {
+    console.warn("We need to enter a number between 1 and 5")
 }
