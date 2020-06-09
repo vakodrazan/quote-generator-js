@@ -54,3 +54,22 @@ if (random >= 1 && random <= 5) { // check if the prompt give us something betwe
 } else {
     console.warn("We need to enter a number between 1 and 5")
 }
+
+
+let newfirstQuotes = [
+    "I choose a lazy person to do a hard job, because a lazy person will find an easy way to do it",
+    "No man goes before his time—unless the boss leaves early",
+    "Doing nothing is very hard to do… you never know when you’re finished"
+];
+
+let newSecondQuotes = [
+    "It takes less time to do a thing right, than it does to explain why you did it wrong",
+    "If you think your boss is stupid, remember: you wouldn’t have a job if he was any smarter",
+    "Most of what we call management consists of making it difficult for people to get their work done"
+];
+
+let newThirdQuotes = [
+    "It is better to have one person working with you than three people working for you",
+    "People who never do any more than they get paid for, never get paid for any more than they do",
+    "The best way to appreciate your job is to imagine yourself without one"
+];
