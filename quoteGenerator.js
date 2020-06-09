@@ -55,8 +55,9 @@ if (random >= 1 && random <= 5) { // check if the prompt give us something betwe
     console.warn("We need to enter a number between 1 and 5")
 }
 
+// Create three new arrays that contains three different string in each.
 
-let newfirstQuotes = [
+let newFirstQuotes = [
     "I choose a lazy person to do a hard job, because a lazy person will find an easy way to do it",
     "No man goes before his time—unless the boss leaves early",
     "Doing nothing is very hard to do… you never know when you’re finished"
@@ -73,3 +74,25 @@ let newThirdQuotes = [
     "People who never do any more than they get paid for, never get paid for any more than they do",
     "The best way to appreciate your job is to imagine yourself without one"
 ];
+
+const generatenewQuotes = () => { // generate random numbers
+    let indexFirstQuotes = Math.floor(Math.random() * (newFirstQuotes.length));
+    let indexSecondQuotes = Math.floor(Math.random() * (newSecondQuotes.length));
+    let indexThirdQuotes = Math.floor(Math.random() * (newThirdQuotes.length));
+
+    let index1 = newFirstQuotes[indexFirstQuotes];
+    let index2 = newSecondQuotes[indexSecondQuotes];
+    let index3 = newThirdQuotes[indexThirdQuotes];
+
+    let newQuotesGenerator = `${index1} ${index2} ${index3}.`; // show the generated quotes
+    console.log(`New quotes: ${newQuotesGenerator}`);
+}
+
+if (number >= 1 && number <= 5) { // check if the prompt give us something between 1 and 5
+    for (let i = 1; i <= number; i++) { // use a loop it's last the number of times that the user entered in the prompt!
+        generatenewQuotes(); //Call the function inside the loop
+    }
+
+} else {
+    console.warn("We need to enter a number between 1 and 5")
+}
