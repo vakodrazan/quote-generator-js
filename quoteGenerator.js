@@ -58,25 +58,32 @@ const generatorQuotes = () => { // generate random numbers
 
 // This is a function for the second quotes 
 
-// const generatenewQuotes = () => { // generate random numbers
-//     let indexFirstQuotes = Math.floor(Math.random() * (newFirstQuotes.length));
-//     let indexSecondQuotes = Math.floor(Math.random() * (newSecondQuotes.length));
-//     let indexThirdQuotes = Math.floor(Math.random() * (newThirdQuotes.length));
+ const generatenewQuotes = () => { // generate random numbers
+     let indexFirstQuotes = Math.floor(Math.random() * (newFirstQuotes.length));
+     let indexSecondQuotes = Math.floor(Math.random() * (newSecondQuotes.length));
+     let indexThirdQuotes = Math.floor(Math.random() * (newThirdQuotes.length));
 
-//     let index1 = newFirstQuotes[indexFirstQuotes];
-//     let index2 = newSecondQuotes[indexSecondQuotes];
-//     let index3 = newThirdQuotes[indexThirdQuotes];
+     let index1 = newFirstQuotes[indexFirstQuotes];
+     let index2 = newSecondQuotes[indexSecondQuotes];
+     let index3 = newThirdQuotes[indexThirdQuotes];
 
-//     let newQuotesGenerator = `${index1} ${index2} ${index3}.`; // show the generated quotes
-//     console.log(`New quotes: ${newQuotesGenerator}`);
-// }
+     let newQuotesGenerator = `${index1} ${index2} ${index3}.`; // show the generated quotes
+     console.log(`New quotes: ${newQuotesGenerator}`);
+ }
 
-let typeOfQuotes = Number(prompt('Choose between two quotes 1 or 2: '));
+let typeOfQuotes = Number(prompt('of quote you want to generate (1 or 2): '));
 if (typeOfQuotes === 1) {
     let quotation = Number(prompt("Enter number between 1 and 5: "));
     if (quotation >= 1 && quotation <= 5) {
         for (let i = 0; i < quotation; i++) {
             generatorQuotes(); //Call the function inside the loop
+        }
+    }
+} else if (typeOfQuotes === 2) {
+    let quotation = Number(prompt("Enter number between 1 and 5: "));
+    if (quotation >= 1 && quotation <= 5) {
+        for (let i = 0; i < quotation; i++) {
+            generatenewQuotes(); //Call the function inside the loop
         }
     }
 }
