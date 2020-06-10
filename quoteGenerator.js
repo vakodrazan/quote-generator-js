@@ -1,4 +1,3 @@
-console.log('it works!');
 let firstQuotes = [  // Create the first quote
     "The purpose of our lives is to be happy",
     "Life is what happens when you're busy making other plans",
@@ -16,47 +15,7 @@ let thirdQuotes = [  // Third quote
     "Try to work as much as you can"
 ];
 
-let randomFirstQuotes = Math.floor(Math.random() * (firstQuotes.length));
-let randomSecondQuotes = Math.floor(Math.random() * (secondQuotes.length));
-let randomThirdQuotes = Math.floor(Math.random() * (thirdQuotes.length));
-
-let quotes = `${firstQuotes[randomFirstQuotes]} ${secondQuotes[randomSecondQuotes]} ${thirdQuotes[randomThirdQuotes]}.`;
-console.log(quotes);
-
-
-// use prompt to ask the user how many times we want to generate a random quote
-
-// let random = prompt("Enter number of quotes you want to loop between 1 to 5: ");
-
-let quotation = Number(prompt("Enter number between 1 and 5: "));
-
-
-// refactor our code into a function,
-
-const generatorQuotes = () => { // generate random numbers
-    let arrayFirstQuotes = Math.floor(Math.random() * (firstQuotes.length));
-    let arraySecondQuotes = Math.floor(Math.random() * (secondQuotes.length));
-    let arrayThirdQuotes = Math.floor(Math.random() * (thirdQuotes.length));
-
-    let arrayIndex1 = firstQuotes[arrayFirstQuotes];
-    let arrayIndex2 = secondQuotes[arraySecondQuotes];
-    let arrayIndex3 = thirdQuotes[arrayThirdQuotes];
-
-    let quotesGenerator = `${arrayIndex1} ${arrayIndex2} ${arrayIndex3}.`; // show the generated quotes
-    console.log(`Quotes: ${quotesGenerator}`);
-}
-
-
-// if (quotation >= 1 && quotation <= 5) { // check if the prompt give us something between 1 and 5
-//     for (let i = 1; i <= quotation; i++) { // use a loop it's last the number of times that the user entered in the prompt!
-//         generatorQuotes(); //Call the function inside the loop
-//     }
-
-// } else {
-//     console.warn("We need to enter a number between 1 and 5")
-// }
-
-// Create three new arrays that contains three different string in each.
+// Create new arrays
 
 let newFirstQuotes = [
     "I choose a lazy person to do a hard job, because a lazy person will find an easy way to do it",
@@ -76,42 +35,50 @@ let newThirdQuotes = [
     "The best way to appreciate your job is to imagine yourself without one"
 ];
 
-// let number = Number(prompt('Enter the new quotes between 1 and 5: '));
 
-const generatenewQuotes = () => { // generate random numbers
-    let indexFirstQuotes = Math.floor(Math.random() * (newFirstQuotes.length));
-    let indexSecondQuotes = Math.floor(Math.random() * (newSecondQuotes.length));
-    let indexThirdQuotes = Math.floor(Math.random() * (newThirdQuotes.length));
 
-    let index1 = newFirstQuotes[indexFirstQuotes];
-    let index2 = newSecondQuotes[indexSecondQuotes];
-    let index3 = newThirdQuotes[indexThirdQuotes];
+// use prompt to ask the user how many times we want to generate a random quote
 
-    let newQuotesGenerator = `${index1} ${index2} ${index3}.`; // show the generated quotes
-    console.log(`New quotes: ${newQuotesGenerator}`);
+
+
+// refactor our code into a function, this is for the first quotes
+
+const generatorQuotes = () => { // generate random numbers
+    let arrayFirstQuotes = Math.floor(Math.random() * (firstQuotes.length));
+    let arraySecondQuotes = Math.floor(Math.random() * (secondQuotes.length));
+    let arrayThirdQuotes = Math.floor(Math.random() * (thirdQuotes.length));
+
+    let arrayIndex1 = firstQuotes[arrayFirstQuotes];
+    let arrayIndex2 = secondQuotes[arraySecondQuotes];
+    let arrayIndex3 = thirdQuotes[arrayThirdQuotes];
+
+    let quotesGenerator = `${arrayIndex1} ${arrayIndex2} ${arrayIndex3}.`; // show the generated quotes
+    console.log(`Quotes: ${quotesGenerator}`);
 }
 
-// if (quotation >= 1 && quotation <= 5) { // check if the prompt give us something between 1 and 5
-//     for (let i = 1; i <= quotation; i++) { // use a loop it's last the number of times that the user entered in the prompt!
-//         generatenewQuotes(); //Call the function inside the loop
-//     }
+// This is a function for the second quotes 
 
-// } else {
-//     console.warn("We need to enter a number between 1 and 5");
+// const generatenewQuotes = () => { // generate random numbers
+//     let indexFirstQuotes = Math.floor(Math.random() * (newFirstQuotes.length));
+//     let indexSecondQuotes = Math.floor(Math.random() * (newSecondQuotes.length));
+//     let indexThirdQuotes = Math.floor(Math.random() * (newThirdQuotes.length));
+
+//     let index1 = newFirstQuotes[indexFirstQuotes];
+//     let index2 = newSecondQuotes[indexSecondQuotes];
+//     let index3 = newThirdQuotes[indexThirdQuotes];
+
+//     let newQuotesGenerator = `${index1} ${index2} ${index3}.`; // show the generated quotes
+//     console.log(`New quotes: ${newQuotesGenerator}`);
 // }
 
-
-if (quotation >= 1 && quotation <= 5) {
-    for (let i = 0; i <= quotation; i++) {
-        let typeOfQuotes = Number(prompt('Enter number between 1 and 2: '));
-        if (typeOfQuotes === 1) {
-            for (let i = 1; i <= quotation; i++) { // use a loop it's last the number of times that the user entered in the prompt!
-                generatorQuotes(); //Call the function inside the loop
-            }
-        } else if (typeOfQuotes === 2) {
-            for (let i = 1; i <= quotation; i++) { // use a loop it's last the number of times that the user entered in the prompt!
-                generatenewQuotes(); //Call the function inside the loop
-            }
+let typeOfQuotes = Number(prompt('Choose between two quotes 1 or 2: '));
+if (typeOfQuotes === 1) {
+    let quotation = Number(prompt("Enter number between 1 and 5: "));
+    if (quotation >= 1 && quotation <= 5) {
+        for (let i = 0; i < quotation; i++) {
+            generatorQuotes(); //Call the function inside the loop
         }
     }
 }
+
+
