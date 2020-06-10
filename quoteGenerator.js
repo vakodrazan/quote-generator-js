@@ -26,8 +26,9 @@ console.log(quotes);
 
 // use prompt to ask the user how many times we want to generate a random quote
 
-let random = prompt("Enter number of quotes you want to loop between 1 to 5: ");
+// let random = prompt("Enter number of quotes you want to loop between 1 to 5: ");
 
+let quotation = Number(prompt("Enter number between 1 and 5: "));
 
 
 // refactor our code into a function,
@@ -46,14 +47,14 @@ const generatorQuotes = () => { // generate random numbers
 }
 
 
-if (random >= 1 && random <= 5) { // check if the prompt give us something between 1 and 5
-    for (let i = 1; i <= random; i++) { // use a loop it's last the number of times that the user entered in the prompt!
-        generatorQuotes(); //Call the function inside the loop
-    }
+// if (quotation >= 1 && quotation <= 5) { // check if the prompt give us something between 1 and 5
+//     for (let i = 1; i <= quotation; i++) { // use a loop it's last the number of times that the user entered in the prompt!
+//         generatorQuotes(); //Call the function inside the loop
+//     }
 
-} else {
-    console.warn("We need to enter a number between 1 and 5")
-}
+// } else {
+//     console.warn("We need to enter a number between 1 and 5")
+// }
 
 // Create three new arrays that contains three different string in each.
 
@@ -75,6 +76,8 @@ let newThirdQuotes = [
     "The best way to appreciate your job is to imagine yourself without one"
 ];
 
+// let number = Number(prompt('Enter the new quotes between 1 and 5: '));
+
 const generatenewQuotes = () => { // generate random numbers
     let indexFirstQuotes = Math.floor(Math.random() * (newFirstQuotes.length));
     let indexSecondQuotes = Math.floor(Math.random() * (newSecondQuotes.length));
@@ -88,11 +91,27 @@ const generatenewQuotes = () => { // generate random numbers
     console.log(`New quotes: ${newQuotesGenerator}`);
 }
 
-if (number >= 1 && number <= 5) { // check if the prompt give us something between 1 and 5
-    for (let i = 1; i <= number; i++) { // use a loop it's last the number of times that the user entered in the prompt!
-        generatenewQuotes(); //Call the function inside the loop
-    }
+// if (quotation >= 1 && quotation <= 5) { // check if the prompt give us something between 1 and 5
+//     for (let i = 1; i <= quotation; i++) { // use a loop it's last the number of times that the user entered in the prompt!
+//         generatenewQuotes(); //Call the function inside the loop
+//     }
 
-} else {
-    console.warn("We need to enter a number between 1 and 5")
+// } else {
+//     console.warn("We need to enter a number between 1 and 5");
+// }
+
+
+if (quotation >= 1 && quotation <= 5) {
+    for (let i = 0; i <= quotation; i++) {
+        let typeOfQuotes = Number(prompt('Enter number between 1 and 2: '));
+        if (typeOfQuotes === 1) {
+            for (let i = 1; i <= quotation; i++) { // use a loop it's last the number of times that the user entered in the prompt!
+                generatorQuotes(); //Call the function inside the loop
+            }
+        } else if (typeOfQuotes === 2) {
+            for (let i = 1; i <= quotation; i++) { // use a loop it's last the number of times that the user entered in the prompt!
+                generatenewQuotes(); //Call the function inside the loop
+            }
+        }
+    }
 }
